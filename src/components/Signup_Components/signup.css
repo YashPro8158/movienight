@@ -1,0 +1,43 @@
+
+/* =========================================
+   SIGNUP PAGE LINKS
+========================================= */
+
+a {
+    color: var(--primary-light);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+a:hover {
+    color: #c4b5fd;
+}
+
+/* =========================================
+   ACTIVE EFFECT
+========================================= */
+
+a:active {
+    opacity: 0.75;
+}
+
+/* =========================================
+   FOCUS ACCESSIBILITY
+========================================= */
+
+a:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 4px;
+
+    border-radius: 4px;
+}

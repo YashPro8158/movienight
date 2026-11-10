@@ -1,0 +1,402 @@
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.topmenus {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 76px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 5%;
+
+    background: rgba(9, 9, 15, 0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.leftlogo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    color: var(--primary-light);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.leftlogo:hover {
+    color: #ffffff;
+    transform: scale(1.04);
+}
+
+/* =========================================
+   PROFILE ICON
+========================================= */
+
+.profileicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* =========================================
+   USER ACCOUNT
+========================================= */
+
+.useraccount {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================
+   USERNAME
+========================================= */
+
+.username {
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    color: var(--text);
+
+    text-transform: capitalize;
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.username:hover {
+    color: var(--primary-light);
+}
+
+/* =========================================
+   NAVBAR USER
+========================================= */
+
+.navbar_user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.user_profile_img,
+.user_initial {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    border: 2px solid rgba(139, 92, 246, 0.6);
+
+    transition: var(--transition);
+}
+
+.user_profile_img {
+    object-fit: cover;
+}
+
+.navbar_user:hover .user_profile_img,
+.navbar_user:hover .user_initial {
+    border-color: var(--primary-light);
+    transform: scale(1.06);
+}
+
+/* =========================================
+   USER INITIAL
+========================================= */
+
+.user_initial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #4f46e5
+    );
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* =========================================
+   PROFILE DROPDOWN
+========================================= */
+
+.menus {
+    position: absolute;
+
+    top: calc(100% + 14px);
+    right: 0;
+
+    width: 230px;
+
+    padding: 12px;
+
+    background: #181824;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    z-index: 999;
+
+    display: none;
+}
+
+.menus.activemenu {
+    display: block;
+
+    animation: menuAppear 0.2s ease;
+}
+
+@keyframes menuAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   DROPDOWN ITEMS
+========================================= */
+
+.menus li {
+    list-style: none;
+    margin: 4px 0;
+}
+
+.menus button {
+    width: 100%;
+
+    padding: 11px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: transparent;
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.menus button:hover {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--primary-light);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagepagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.pagepagination button {
+    width: auto;
+    min-width: 110px;
+
+    padding: 11px 22px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.pagepagination button:hover:not(:disabled) {
+    background: var(--primary);
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+.pagepagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   DARK THEME SUPPORT
+========================================= */
+
+.darktheme {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.darktheme .topmenus {
+    background: rgba(9, 9, 15, 0.88);
+}
+
+.darktheme .menus {
+    background: #181824;
+    border-color: var(--border);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .topmenus {
+        min-height: 68px;
+        padding: 12px 4%;
+    }
+
+    .leftlogo {
+        font-size: 1.5rem;
+    }
+
+    .profileicon {
+        gap: 10px;
+    }
+
+    .user_profile_img,
+    .user_initial {
+        width: 40px;
+        height: 40px;
+    }
+
+    .username {
+        font-size: 0.85rem;
+    }
+
+    .menus {
+        width: 210px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .topmenus {
+        padding: 12px 15px;
+    }
+
+    .leftlogo {
+        font-size: 1.3rem;
+    }
+
+    .navbar_user {
+        gap: 7px;
+    }
+
+    .username {
+        font-size: 0.8rem;
+    }
+
+    .user_profile_img,
+    .user_initial {
+        width: 36px;
+        height: 36px;
+    }
+
+    .user_initial {
+        font-size: 17px;
+    }
+
+    .pagepagination {
+        gap: 8px;
+    }
+
+    .pagepagination button {
+        min-width: 0;
+        padding: 10px 14px;
+        font-size: 0.8rem;
+    }
+
+}
+
+.signout_btn {
+    width: auto;
+
+    padding: 11px 20px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.signout_btn:hover {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}

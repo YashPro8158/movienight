@@ -1,0 +1,337 @@
+
+/* =========================================
+   AUTHENTICATION PAGE
+========================================= */
+
+.authentication_container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(139, 92, 246, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(79, 70, 229, 0.12),
+            transparent 35%
+        ),
+        var(--bg);
+}
+
+/* =========================================
+   AUTHENTICATION FORM
+========================================= */
+
+.signupform {
+    width: 100%;
+    max-width: 480px;
+
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 35px;
+
+    background: rgba(24, 24, 36, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(139, 92, 246, 0.05);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.formheading {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.formheading h1 {
+    color: var(--text);
+
+    font-size: 1.9rem;
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+}
+
+.formheading p {
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* =========================================
+   FORM INPUT CONTAINER
+========================================= */
+
+.forminput {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =========================================
+   FIRST AND LAST NAME
+========================================= */
+
+.first_last_name {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.first_last_name input {
+    width: 50%;
+    min-width: 0;
+}
+
+/* =========================================
+   INPUT FIELDS
+========================================= */
+
+.forminput input,
+.first_last_name input {
+    width: 100%;
+
+    padding: 13px 15px;
+    margin: 7px 0;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: var(--radius-md);
+
+    outline: none;
+
+    color: var(--text);
+
+    font-size: 0.95rem;
+
+    transition: var(--transition);
+}
+
+.forminput input::placeholder,
+.first_last_name input::placeholder {
+    color: var(--text-muted);
+}
+
+.forminput input:hover,
+.first_last_name input:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.forminput input:focus,
+.first_last_name input:focus {
+    background: rgba(139, 92, 246, 0.07);
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.13);
+}
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.signupbuttons,
+.otherinputs {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signupbuttons {
+    align-items: center;
+    margin-top: 12px;
+}
+
+/* =========================================
+   AUTHENTICATION BUTTONS
+========================================= */
+
+.signupbuttons button,
+.otherinputs button {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+    margin: 8px 0;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6d28d9
+    );
+
+    border: none;
+    border-radius: var(--radius-md);
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.signupbuttons button:hover,
+.otherinputs button:hover {
+    background: linear-gradient(
+        135deg,
+        #a78bfa,
+        #7c3aed
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 22px rgba(139, 92, 246, 0.25);
+}
+
+.signupbuttons button:active,
+.otherinputs button:active {
+    transform: scale(0.98);
+}
+
+.signupbuttons button img,
+.otherinputs button img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+/* =========================================
+   FORM PARAGRAPHS
+========================================= */
+
+.signupform p {
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+/* =========================================
+   FORM LINKS
+========================================= */
+
+.signupform a {
+    color: var(--primary-light);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border: none;
+
+    transition: var(--transition);
+}
+
+.signupform a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .signupform {
+        max-width: 450px;
+        padding: 30px 25px;
+    }
+
+    .formheading h1 {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .authentication_container {
+        padding: 20px 12px;
+    }
+
+    .signupform {
+        width: 100%;
+        padding: 25px 18px;
+
+        border-radius: var(--radius-lg);
+    }
+
+    .formheading h1 {
+        font-size: 1.5rem;
+    }
+
+    .formheading p {
+        font-size: 0.85rem;
+    }
+
+    .first_last_name {
+        gap: 8px;
+    }
+
+    .forminput input,
+    .first_last_name input {
+        padding: 12px;
+        font-size: 0.88rem;
+    }
+
+}
