@@ -127,7 +127,7 @@ function App() {
       }}
     >
 
-      <BrowserRouter>
+      <BrowserRouter basename="/movienight">
 
         <Routes>
 
